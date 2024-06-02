@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-gallery {
+        width: 1300px;
+        height: 600px;
+        border: 2px double black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .center-image {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 50px;
+        display: inline-block;
+    }
+
+    .top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 50px;
+        display: inline-block;
+    }
+
+    .bottom-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: inline-block;
+    }
+        .traffic-signal { 
+            width: 100px; 
+            height: 300px; 
+            background-color: #333; 
+            border-radius: 10px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            align-items: center; 
+        } 
+  
+        .light { 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            margin: 10px; 
+            transition: background-color 0.9s; 
+        } 
+  
+        @keyframes blinkRed { 
+  
+            0%, 
+            49% { 
+                background-color: red; 
+            } 
+  
+            50%, 
+            100% { 
+                background-color: black; 
+            } 
+        } 
+  
+        @keyframes blinkYellow { 
+  
+            0%, 
+            49% { 
+                background-color: yellow; 
+            } 
+            50%, 
+            100% { 
+                background-color: black; 
+            } 
+        } 
+  
+        @keyframes blinkGreen { 
+  
+            0%, 
+            49% { 
+                background-color: green; 
+            } 
+  
+            50%, 
+            100% { 
+                background-color: black; 
+            } 
+        } 
+  
+        .red { 
+            background-color: red; 
+            animation: blinkRed 9s infinite; 
+        } 
+  
+        .yellow { 
+            background-color: yellow; 
+            animation: blinkYellow 9s infinite; 
+            animation-delay: 3s; 
+        } 
+  
+        .green { 
+            background-color: green; 
+            animation: blinkGreen 9s infinite; 
+            animation-delay: 6s; 
+        }
+</style>
+</head>
+<body>
+    <div class="image-gallery">
+        <img src="https://cdn.britannica.com/25/222725-050-170F622A/Indian-cricketer-Mahendra-Singh-Dhoni-2011.jpg" alt="Image 1" class="image top-left">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5_lvy9vQDQzU4XYYihRtdZduxI2P7zxrphw&usqp=CAU" alt="Image 2" class="image top-right">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRNmyI7j4UJK75-mWKHJ2D07V9aUDsweLY0w&usqp=CAU" alt="Image 3" class="image bottom-left">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPlihAukJ2flXtYW8x9amaJeNJoUU3jojnrg&usqp=CAU" alt="image 4" class="image bottom-right">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCobVXqadI7gE3JLGezIPbQF8vnSlzuXrR2A&usqp=CAU" alt="image 5" class="image center-image">
+    </div>
+    <hr>
+    <br><br>
+    <center>
+    <div class="traffic-signal"> 
+        <div class="light red animate"></div> 
+        <div class="light yellow"></div> 
+        <div class="light green"></div>
+    </div>
+</center>
+</body>
+</html>
