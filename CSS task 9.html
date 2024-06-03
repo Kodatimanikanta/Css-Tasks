@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using mediaquaries and map tag</title>
+    <style>
+        .item1 {
+          background: LightSkyBlue;
+          grid-area: header;
+        }
+        
+        .item2 {
+          background: LightSalmon;
+          grid-area: advert;
+        }
+        
+        .item3 {
+          background: PaleTurquoise;
+          grid-area: content;
+        }
+        
+        .item4 {
+          background: lightpink;
+          grid-area: footer;
+        }
+        
+        .container {
+          font-size: 1.5em;
+          min-height: 300px;
+          width: 100%;
+          background: rgba(65, 53, 53, 0.274);
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 50px auto 1fr auto;
+          grid-gap: 10px;
+          grid-template-areas:
+            "header"
+            "advert"
+            "content"
+            "footer";
+        }
+        
+        @media (min-width: 300px){
+          .container{
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+              "advert header"
+              "advert content"
+              "advert footer";
+          }
+        }
+        
+        @media (min-width: 1000000px){
+          .container{
+            /* change the code below this line */
+          grid-template-columns: 50px;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+              "advert header"
+              "advert content"
+              "advert footer";
+          }
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">header</div>
+        <div class="item2">advert</div>
+        <div class="item3">content</div>
+        <div class="item4">footer</div>
+      </div>
+      <hr><br><br>
+      <h1>Click on a shape to see how it works:</h1>
+    <img src="./shapes.png" alt="Geometrical Shapes" usemap="#shapes">
+    <map name="shapes">
+        <area shape="circle" coords="40,40,40" href="https://en.wikipedia.org/wiki/Circle" alt="Circle">
+    	<area shape="poly" coords="148,2,104,80,193,80" href="https://en.wikipedia.org/wiki/Triangle" alt="Triangle">
+    	<area shape="rect" coords="226,2,323,80" href="https://en.wikipedia.org/wiki/Rectangle" alt="Rectangle">
+    	<area shape="poly" coords="392,2,352,32,366,80,418,80,432,32" href="https://en.wikipedia.org/wiki/The_Pentagon" alt="Pentagon">
+    </map>
+</body>
+</html>
