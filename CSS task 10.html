@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chess board & 3x3 image gallery layout</title>
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <style>
+        @media screen and (min-width:300px) and (max-width:1500px) {
+           
+            .blackr1:hover,
+            .blackr2:hover,
+            .white1:hover,
+            .white2:hover 
+            {
+             transform: scale(1.3);
+            }
+    
+        .main{
+            height: 110vh;
+            width: 70vw;
+            /* border: 1px solid grey; */
+            display: grid;
+            grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10%;
+            text-align: center;
+            justify-content: center;
+        }
+        .main>div:nth-child(odd){
+           background-color: #ff8000;
+        }
+        .main>div:nth-child(even){
+           background-color: white;
+        }
+        .main>.blackr2:nth-child(even){
+           background-color:#ff8000;
+        }
+        .main>.blackr2:nth-child(odd){
+           background-color: white;
+        }
+        .main>.empty1:nth-child(odd){
+           background-color: #ff8000;
+        }
+        .main>.empty1:nth-child(even){
+           background-color: white;
+        }
+        .main>.empty2:nth-child(even){
+           background-color: #ff8000;
+        }
+        .main>.empty2:nth-child(odd){
+           background-color: white;
+        }
+        .main>.empty3:nth-child(even){
+           background-color: white;
+        }
+        .main>.empty3:nth-child(odd){
+           background-color: #ff8000;
+        }
+        .main>.empty4:nth-child(odd){
+           background-color: white;
+        }
+        .main>.empty4:nth-child(even){
+           background-color: #ff8000;
+        }
+        .main>.white1:nth-child(even){
+           background-color: white;
+        }
+        .main>.white1:nth-child(odd){
+           background-color: #ff8000;
+        }
+        .main>.white2:nth-child(odd){
+           background-color: white;
+        }
+        .main>.white2:nth-child(even){
+           background-color:#ff8000;
+        }
+       .blackr1{
+        font-size: 50px;
+        padding: 4px;
+        align-items: center;
+       }
+       .blackr2{
+        font-size: 50px;
+        align-items: center;
+       }
+       .white1{
+        font-size: 50px;
+        padding: 5px;
+        align-items: center;
+       }
+       .white2{
+        font-size: 50px;
+        align-items: center;
+       }
+    }
+   
+    @media screen and (min-width:1020px){
+    
+}
+.gallery{
+            width: 70%;
+            margin-left: 20%;
+            height: 100%;
+            border: 1px solid;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 33% 33% 33%;
+            gap: 5px;
+        }
+        
+        img{
+            width: 100%;
+            height: 100%;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Chess Board</h1>
+    <div class="main">
+        <div class="blackr1">&#9814</div>
+        <div class="blackr1">&#9816</div>
+        <div class="blackr1">&#9815</div>
+        <div class="blackr1">&#9812</div>
+        <div class="blackr1">&#9813</div>
+        <div class="blackr1">&#9815</div>
+        <div class="blackr1">&#9816</div>
+        <div class="blackr1">&#9814</div>
+    
+    <div class="blackr2">&#9817</div>
+    <div class="blackr2">&#9817</div>
+    <div class="blackr2">&#9817</div>
+    <div class="blackr2">&#9817</div>
+    <div class="blackr2">&#9817</div>
+    <div class="blackr2">&#9817</div>
+    <div class="blackr2">&#9817</div>
+    <div class="blackr2">&#9817</div>
+
+    <div class="empty1"></div>
+    <div class="empty1"></div>
+    <div class="empty1"></div>
+    <div class="empty1"></div>
+    <div class="empty1"></div>
+    <div class="empty1"></div>
+    <div class="empty1"></div>
+    <div class="empty1"></div>
+
+    <div class="empty2"></div>
+    <div class="empty2"></div>
+    <div class="empty2"></div>
+    <div class="empty2"></div>
+    <div class="empty2"></div>
+    <div class="empty2"></div>
+    <div class="empty2"></div>
+    <div class="empty2"></div>
+
+    <div class="empty3"></div>
+    <div class="empty3"></div>
+    <div class="empty3"></div>
+    <div class="empty3"></div>
+    <div class="empty3"></div>
+    <div class="empty3"></div>
+    <div class="empty3"></div>
+    <div class="empty3"></div>
+
+    <div class="empty4"></div>
+    <div class="empty4"></div>
+    <div class="empty4"></div>
+    <div class="empty4"></div>
+    <div class="empty4"></div>
+    <div class="empty4"></div>
+    <div class="empty4"></div>
+    <div class="empty4"></div>
+
+    <div class="white1">&#9823</div>
+    <div class="white1">&#9823</div>
+    <div class="white1">&#9823</div>
+    <div class="white1">&#9823</div>
+    <div class="white1">&#9823</div>
+    <div class="white1">&#9823</div>
+    <div class="white1">&#9823</div>
+    <div class="white1">&#9823</div>
+   
+    <div class="white2">&#9820</div>
+    <div class="white2">&#9822</div>
+    <div class="white2">&#9821</div>
+    <div class="white2">&#9818</div>
+    <div class="white2">&#9819</div>
+    <div class="white2">&#9821</div>
+    <div class="white2">&#9822</div>
+    <div class="white2">&#9820</div>
+   </div>
+    </div>
+    <hr><hr><br><br>
+    <h1 style="margin-left: 30%;">3x3 image gallery layout using grid with responsive</h1>
+    <div class="gallery">
+        <div class="image"><img src="https://as2.ftcdn.net/v2/jpg/05/47/97/81/1000_F_547978128_vqEEUYBr1vcAwfRAqReZXTYtyawpgLcC.jpg" alt="Image 1"></div>
+        <div class="image"><img src="https://as1.ftcdn.net/v2/jpg/05/68/49/90/1000_F_568499083_q9QfafI1PkGJA8QQMIpiTT557xUUJ4Qq.jpg" alt="Image 2"></div>
+        <div class="image"><img src="https://i.pinimg.com/originals/a4/96/c2/a496c2b6bc5d7cfe0e0674f6598c38ad.jpg" alt="Image 3"></div>
+        <div class="image"><img src="https://c4.wallpaperflare.com/wallpaper/431/451/684/the-most-beautiful-picture-of-nature-wallpaper-preview.jpg" alt="Image 4"></div>
+        <div class="image"><img src="https://t3.ftcdn.net/jpg/05/28/86/66/360_F_528866602_aiVwnOnkooTrqo3MgicCf83SVVzt1Gnd.jpg" alt="Image 5"></div>
+        <div class="image"><img src="https://img.lovepik.com/photo/48013/0603.jpg_wh860.jpg" alt="Image 6"></div>
+        <div class="image"><img src="https://images.squarespace-cdn.com/content/v1/61c4da8eb1b30a201b9669f2/1696691175374-MJY4VWB1KS8NU3DE3JK1/Sounds-of-Nature.jpg?format=750w" alt="Image 7"></div>
+        <div class="image"><img src="https://media.istockphoto.com/id/1199017962/photo/idyllic-forest-glade-mossy-woodland-golden-rays-of-sunbeams-panorama.webp?b=1&s=170667a&w=0&k=20&c=c6Zym01jfDtiTiPfBE-YYKttqN5TibwBbapPoNbTcVU=" alt="Image 8"></div>
+        <div class="image"><img src="https://wallpaperset.com/w/full/d/6/2/538292.jpg" alt="Image 9"></div>
+    </div>
+    
+</body>
+</html>
