@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+    background-color: tomato;
+    width: 100%;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    padding: 10vh 0;
+}
+.flexgrid {
+    display: flex;
+    min-height: 50vh;
+}
+.left-side, .right-side {
+    width: 50%;
+}
+.right-side {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+        width: 100%;
+    }
+}
+.left-side, .right-bottom, .right-top {
+    display: flex;
+
+}
+
+.lay{
+        display: grid;
+        background-color:rgb(0, 0, 0);
+        padding: 10px;
+        gap: 10px;
+        grid-template-columns:100px 100px 100px 100px;
+        grid-template-rows:50px 50px 50px  50px;
+        grid-auto-rows:50px;
+        justify-content: center;
+      }
+      .g{
+        background-color: rgb(0, 145, 255);
+        text-align:center;
+        
+      }
+      .e1{
+        grid-row:1/4 ;
+      }
+      #e11{
+        grid-column: 1/2;
+        grid-row:4/7;
+        /* grid-template-rows:40px ! ; */
+      }
+      .e1:hover {
+  background-color: yellow;
+  transform: translate(50px,50px);
+}
+.e2:hover {
+  background-color: yellow;
+  transform: rotate(-20deg);
+}
+.e3:hover{
+    background-color: whitesmoke;
+    transform: rotateX(150deg);
+}
+.e4:hover{
+    background-color: whitesmoke;
+    transform: rotateY(150deg);
+}
+.e5:hover{
+    background-color: whitesmoke;
+    transform: rotatez(150deg);
+}
+.e6{
+  background: rgb(128, 255, 0);
+  transition: width 3s;
+  transition-delay: 1s;
+}
+.e6:hover{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    transition: width 5s;
+
+}
+</style>
+</head>
+<body>
+    <section class="flexgrid">
+        <div class="left-side">
+            <div class="item">1</div>
+        </div>
+        <div class="right-side">
+            <div class="right-top">
+                <div class="item">2</div>
+            </div>
+            <div class="right-bottom">
+                <div class="item">3</div>
+                <div class="item">4</div>
+            </div>
+        </div>
+    </section>
+    <div class="lay">
+        <div class="g e1">1</div>
+        <div class="g e2">2</div>
+        <div class="g e3">3</div>
+        <div class="g e4">4</div>
+        <div class="g e5">5</div>
+        <div class="g e6">6</div>
+        <div class="g e7">7</div>
+        <div class="g e8">8</div>
+        <div class="g e9">9</div>
+        <div class="g e10">10</div>
+        <div class="g e11">11</div>
+        <div class="g e7">12</div>
+        <div class="g e8">13</div>
+        <div class="g e9">14</div>
+       
+    </div>   
+</body>
+</html>

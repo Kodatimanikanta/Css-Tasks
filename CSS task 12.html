@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cooling Fan</title>
+</head>
+
+<style>
+  /*Styling for Rotating Fan*/
+
+body{
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+.container{
+  width: 100%;
+  text-align: center;
+}
+.svg{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 40px;
+}
+img{
+  width: 450px;
+  height: 450px;
+}
+input[type=radio]{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  display: none;
+}
+label{
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 900;
+  margin-left: 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 13px #ffb300 , -5px -5px 13px #06ffff;
+}
+label:hover{
+  box-shadow: inset 5px 5px 13px #000000 , -5px -5px 13px #ff0000;
+}
+.wings{
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#stop:checked ~ .svg > .wings{
+  transform: rotate(0);
+}
+#low:checked  ~ .svg > .wings{
+  animation-name: slow;
+  animation-duration: 1s;
+}
+@keyframes slow{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+#second:checked  ~ .svg > .wings{
+  animation-name: mdm;
+  animation-duration: .5s;
+}
+@keyframes mdm{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+#third:checked  ~ .svg > .wings{
+  animation-name: fast;
+  animation-duration: .1s;
+}
+@keyframes fast{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+</style>
+
+<body>
+  <div class="container">
+    <br><br>
+    <form style="margin-top: 30px;">
+      <input type="radio" id="stop" name="fan">
+      <label for="stop" id="stop_active">0</label>
+
+            <input type="radio" id="low" name="fan">
+      <label for="low" id="low_active">1</label>
+
+            <input type="radio" id="second" name="fan">
+      <label for="second" id="mdm_active">2</label>
+
+            <input type="radio" id="third" name="fan">
+      <label for="third" id="high_active">3</label>
+
+      <div class="svg">
+        <img class="wings" src="https://www.freepnglogos.com/uploads/fan-png/fan-svg-png-icon-download-onlinewebfontsm-31.png" alt="Fan">
+        
+      </div>
+    </form>
+    
+  </div>
+
+
+</body>
+</html>
